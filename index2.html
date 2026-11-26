@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06080c">
+<title>Ebrahim Gad | Junior IT Support Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600&family=Manrope:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#06080c;--ink:#f5f7fa;--soft:#c6cfdb;--muted:#8f9bab;--line:rgba(160,180,210,.2);--accent:#4fd1c5;--amber:#ffb347;color-scheme:dark}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:300;line-height:1.05;letter-spacing:-.025em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:6px}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+main,.marq,.foot{position:relative;z-index:1}
+main{text-shadow:0 2px 22px rgba(0,0,0,.7)}
+.brand{position:fixed;z-index:5;left:22px;top:calc(env(safe-area-inset-top,0px) + 16px);font-family:Fraunces,serif;font-weight:600;font-size:1.1rem}
+.sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:96px 24px calc(100px + env(safe-area-inset-bottom,0px))}
+.sec.hero{justify-content:flex-start;padding-top:88px}
+.col{width:min(540px,100%)}
+.muted{color:var(--muted)}
+.hero h1{font-size:clamp(3.2rem,15vw,6.6rem);font-weight:300;margin:14px 0 12px}
+.cycle-line{display:flex;flex-wrap:wrap;gap:.3em;font-family:Fraunces,serif;font-weight:300;font-size:clamp(1.6rem,7vw,2.8rem);line-height:1.15;letter-spacing:-.02em}
+.cycle{display:inline-block;height:1.15em;overflow:hidden}
+.track{display:flex;flex-direction:column;animation:cyc 12s ease-in-out infinite}
+.track b{height:1.15em;font-weight:300;color:var(--accent);white-space:nowrap}
+@keyframes cyc{0%,16%{transform:translateY(0)}20%,36%{transform:translateY(-1.15em)}40%,56%{transform:translateY(-2.3em)}60%,76%{transform:translateY(-3.45em)}80%,96%{transform:translateY(-4.6em)}100%{transform:translateY(-5.75em)}}
+.lead{color:var(--soft);font-size:1.05rem;max-width:46ch}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:26px}
+.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;border-radius:999px;background:var(--ink);color:#06080c;font-weight:700;text-shadow:none}
+.link{font-weight:600;border-bottom:1px solid var(--muted);padding-bottom:2px}
+.link:hover{border-color:var(--accent);color:var(--accent)}
+.sec h2{font-size:clamp(2.2rem,9vw,3.6rem);margin-bottom:22px}
+.stats{display:flex;gap:34px;margin:26px 0}
+.stats b{display:block;font-family:Fraunces,serif;font-weight:300;font-size:2.6rem;line-height:1;color:var(--accent)}
+.stats span{font-size:.82rem;color:var(--muted)}
+.edu{padding:18px 0;border-block:1px solid var(--line);margin-bottom:18px}
+.edu h3{font-size:1.3rem;margin-bottom:4px}
+.grp{padding:16px 0;border-top:1px solid var(--line)}
+.grp:last-child{border-bottom:1px solid var(--line)}
+.grp h3{font-size:1.3rem;margin-bottom:6px;font-weight:400}
+.grp p{color:var(--soft);font-size:.95rem}
+.item{padding:18px 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.item h3{font-size:2rem;color:var(--accent);margin-bottom:2px}
+.item .sub{color:var(--ink);font-weight:600;font-size:.92rem;margin-bottom:6px}
+.item p{color:var(--soft);font-size:.95rem}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:15px 0;border-top:1px solid var(--line);color:var(--soft)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row span{color:var(--amber);font-size:.8rem;font-weight:700;white-space:nowrap;padding-top:3px}
+.mail{display:inline-block;margin:14px 0 4px;font-family:Fraunces,serif;font-weight:300;font-size:clamp(1.3rem,6vw,2.2rem);border-bottom:1px solid var(--accent);overflow-wrap:anywhere}
+.marq{overflow:hidden;white-space:nowrap;padding:16px 0;border-block:1px solid var(--line);background:rgba(6,8,12,.55)}
+.marq div{display:inline-block;animation:mq 30s linear infinite;font-family:Fraunces,serif;font-weight:300;font-size:1.6rem}
+.marq i{font-style:normal;color:var(--accent);margin:0 20px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.foot{padding:20px 24px calc(100px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.85rem}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;gap:2px;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,rgba(6,8,12,.92) 55%,rgba(6,8,12,0));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.tabs button{flex:1;min-height:48px;border:0;background:transparent;color:var(--muted);font:600 .74rem Manrope,sans-serif;cursor:pointer;position:relative}
+.tabs button.on{color:var(--ink)}
+.tabs button.on::after{content:"";position:absolute;left:50%;bottom:4px;width:18px;height:2px;margin-left:-9px;border-radius:2px;background:var(--accent)}
+@media(min-width:900px){
+  .sec{padding:100px 8%}.sec.hero{justify-content:center}
+  .brand{left:8%}
+  .tabs{left:8%;right:auto;width:min(520px,60%);background:none;backdrop-filter:none;-webkit-backdrop-filter:none;bottom:14px}
+  .foot{padding:20px 8% 90px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track,.marq div{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<a class="brand" href="#hero">Ebrahim Gad</a>
+<main>
+<section id="hero" class="sec hero"><div class="col">
+<p class="muted">Mansoura, Egypt · Class of 2025</p>
+<h1>I’m Ebrahim Gad</h1>
+<div class="cycle-line"><span class="cycle"><span class="track"><b>IT Support</b><b>Networking</b><b>Windows</b><b>CCTV</b><b>Hardware</b><b>IT Support</b></span></span><span>Engineer</span></div>
+<p class="lead" style="margin-top:14px">Junior IT Support Engineer. I fix hardware, Windows and network problems.</p>
+<div class="actions"><a class="btn" data-t="contact" href="#contact">Get in touch</a><a class="link" data-t="about" href="#about">About me</a></div>
+</div></section>
+
+<section id="about" class="sec"><div class="col">
+<h2>About</h2>
+<p class="lead">Computer and Information Science graduate from Mansoura University with a solid foundation in IT technical support, hardware, Windows, networking, firewalls and CCTV installation. I enjoy diagnosing technical issues and supporting end users.</p>
+<div class="stats"><div><b>2025</b><span>Graduated</span></div><div><b>4</b><span>Trainings</span></div><div><b>3.1</b><span>GPA / 4.0</span></div></div>
+<div class="edu"><h3>Bachelor’s Degree in Computers and Information</h3><p class="muted">Mansoura University · 2025</p></div>
+<p class="lead" style="font-size:.95rem">Analytical thinking · Problem-solving · Communication · Teamwork · Adaptability · Continuous learning</p>
+<p class="muted" style="margin-top:8px">Arabic (Native) · English (Very good)</p>
+</div></section>
+
+<section id="skills" class="sec"><div class="col"><h2>Skills</h2><div id="skillsGrid"></div></div></section>
+<div class="marq"><div id="mq"></div></div>
+<section id="training" class="sec"><div class="col"><h2>Technical training</h2><div id="trainGrid"></div></div></section>
+<section id="experience" class="sec"><div class="col"><h2>Practical experience</h2><div id="practice"></div></div></section>
+
+<section id="contact" class="sec"><div class="col">
+<h2>That’s it</h2>
+<p class="lead">I’m open to junior IT Support and Technical Support roles. Send me an email or find me online.</p>
+<a class="mail" href="mailto:ibrahim.abo.khalil05@gmail.com">ibrahim.abo.khalil05@gmail.com</a>
+<p class="muted">01032243303</p>
+<div class="actions">
+<a class="btn" href="mailto:ibrahim.abo.khalil05@gmail.com">Send email</a>
+<a class="link" href="https://linkedin.com/in/ibrahim-gad-3b0484235" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="link" href="https://github.com/Ebrahimgad123" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="link" href="https://facebook.com/ebrahim.gad.85855" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+</div></section>
+</main>
+<footer class="foot">© 2026 Ebrahim Gad Abo Khalil Mohamed</footer>
+
+<nav class="tabs" aria-label="Sections">
+<button data-t="hero">Home</button><button data-t="about">About</button><button data-t="skills">Skills</button><button data-t="training">Training</button><button data-t="experience">Work</button><button data-t="contact">Contact</button>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+$("skillsGrid").innerHTML=[
+["IT Support & Troubleshooting",["Hardware and software troubleshooting","PC diagnostics and maintenance","Windows installation and configuration","Desktop support","Software installation"]],
+["Networking",["TCP/IP","IP addressing and subnetting","DNS","DHCP","LAN/WAN fundamentals","Connectivity troubleshooting","Switching and routing","Firewall fundamentals"]],
+["Systems & Applications",["Windows 10/11","Windows Server fundamentals","Active Directory fundamentals","User and permission management","Microsoft Office"]],
+["Security Systems",["CCTV camera installation"]]
+].map(([g,i])=>`<div class="grp"><h3>${g}</h3><p>${i.join(" · ")}</p></div>`).join("");
+const mq=["CCNA","MCSA","IT Essentials","CCTV","TCP/IP","DNS","DHCP","Windows Server","Active Directory"].map(x=>`${x}<i>✦</i>`).join("");
+$("mq").innerHTML=mq+mq;
+$("trainGrid").innerHTML=[
+["CCNA","Cisco Networking Fundamentals","Networking fundamentals, TCP/IP, IP addressing and subnetting, switching, routing, VLAN concepts and troubleshooting."],
+["MCSA","Microsoft Systems Administration","Windows administration, Windows Server fundamentals and basic user and system management."],
+["IT Essentials","Hardware and operating systems","Computer hardware components, PC assembly and maintenance, OS installation and troubleshooting."],
+["CCTV","Surveillance camera systems","Mounting indoor and outdoor cameras, running cables, connecting to a DVR/NVR and checking live view and recording."]
+].map(([n,s,t])=>`<div class="item"><h3>${n}</h3><p class="sub">${s}</p><p>${t}</p></div>`).join("");
+$("practice").innerHTML=[
+["Diagnosed common hardware and software issues and performed basic PC maintenance.","Hardware"],
+["Installed Windows and configured the system in a practice environment.","Windows"],
+["Applied networking concepts to troubleshoot basic connectivity problems.","Networking"],
+["Practiced IP addressing, subnetting and foundational network configuration.","Networking"],
+["Installed CCTV cameras and connected them to a DVR/NVR in a practice environment.","CCTV"]
+].map(([t,k])=>`<div class="row"><p>${t}</p><span>${k}</span></div>`).join("");
+
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,lite=innerWidth<900;
+const secs=["hero","about","skills","training","experience","contact"].map($),tabBtns=[...document.querySelectorAll(".tabs button")];
+document.querySelectorAll("[data-t]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault();scrollTo({top:$(el.dataset.t).getBoundingClientRect().top+scrollY,behavior:reduce?"auto":"smooth"})}));
+
+// 3D background: a liquid-metal form that slowly morphs and glides as you scroll
+try{
+  const canvas=$("gl"),R=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,lite?1.5:2));
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(40,1,.1,50);cam.position.z=7.5;
+
+  const noise=`
+  vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
+  vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}
+  vec4 permute(vec4 x){return mod289(((x*34.)+1.)*x);}
+  vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-.85373472095314*r;}
+  float snoise(vec3 v){
+    const vec2 C=vec2(1./6.,1./3.);const vec4 D=vec4(0.,.5,1.,2.);
+    vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);
+    vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.-g;vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);
+    vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;
+    i=mod289(i);
+    vec4 p=permute(permute(permute(i.z+vec4(0.,i1.z,i2.z,1.))+i.y+vec4(0.,i1.y,i2.y,1.))+i.x+vec4(0.,i1.x,i2.x,1.));
+    float n_=.142857142857;vec3 ns=n_*D.wyz-D.xzx;
+    vec4 j=p-49.*floor(p*ns.z*ns.z);
+    vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.*x_);
+    vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.-abs(x)-abs(y);
+    vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);
+    vec4 s0=floor(b0)*2.+1.;vec4 s1=floor(b1)*2.+1.;vec4 sh=-step(h,vec4(0.));
+    vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+    vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);
+    vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
+    p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+    vec4 m=max(.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.);m=m*m;
+    return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
+  }`;
+  const mat=new THREE.ShaderMaterial({
+    uniforms:{uT:{value:0},uN:{value:.3},uMix:{value:0},uI:{value:1}},
+    vertexShader:noise+`
+    uniform float uT,uN;varying vec3 vN;varying vec3 vV;
+    vec3 disp(vec3 p){return p*(1.+snoise(p*1.3+vec3(0.,uT*.3,0.))*uN+snoise(p*2.6-vec3(uT*.2,0.,0.))*uN*.3);}
+    void main(){
+      vec3 p=normalize(position);
+      vec3 t1=normalize(cross(p,vec3(0.,1.,.001)));vec3 t2=normalize(cross(p,t1));
+      vec3 d0=disp(p),d1=disp(normalize(p+t1*.02)),d2=disp(normalize(p+t2*.02));
+      vec3 n=normalize(cross(d1-d0,d2-d0));if(dot(n,p)<0.)n=-n;
+      vN=normalize(mat3(modelMatrix)*n);
+      vec4 wp=modelMatrix*vec4(d0,1.);vV=normalize(cameraPosition-wp.xyz);
+      gl_Position=projectionMatrix*viewMatrix*wp;
+    }`,
+    fragmentShader:`
+    uniform float uMix,uI;varying vec3 vN;varying vec3 vV;
+    void main(){
+      vec3 n=normalize(vN),v=normalize(vV),r=reflect(-v,n);
+      float h=r.y*.5+.5;
+      vec3 c=mix(vec3(.008,.012,.02),vec3(.06,.1,.14),smoothstep(0.,.6,h));
+      vec3 rim=mix(vec3(.31,.82,.77),vec3(1.,.7,.28),uMix);
+      c+=vec3(.7,.82,.9)*(1.-smoothstep(0.,.1,abs(h-.72)))*.55;
+      c+=rim*(1.-smoothstep(0.,.1,abs(h-.38)))*.35;
+      c+=rim*pow(1.-max(dot(n,v),0.),3.)*.9;
+      c+=vec3(1.)*pow(max(dot(r,normalize(vec3(.6,.8,.5))),0.),70.)*.9;
+      c+=rim*pow(max(dot(r,normalize(vec3(-.7,.2,.6))),0.),40.)*.6;
+      gl_FragColor=vec4(pow(c*uI,vec3(1./2.2)),1.);
+    }`
+  });
+  const G=new THREE.Group();scene.add(G);
+  const orb=new THREE.Mesh(new THREE.IcosahedronGeometry(1,lite?4:5),mat);G.add(orb);
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(1.75,.006,8,220),new THREE.MeshBasicMaterial({color:0x4fd1c5,transparent:true,opacity:.55}));ring.rotation.set(1.25,.25,0);G.add(ring);
+
+  const c=document.createElement("canvas");c.width=c.height=32;const x=c.getContext("2d"),g=x.createRadialGradient(16,16,0,16,16,16);
+  g.addColorStop(0,"#fff");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,32,32);
+  const NP=lite?160:380,pp=new Float32Array(NP*3);
+  for(let i=0;i<NP;i++){const v=new THREE.Vector3(Math.random()-.5,Math.random()-.5,Math.random()-.5).normalize().multiplyScalar(3+Math.random()*7);pp.set([v.x,v.y,v.z],i*3)}
+  const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pp,3));
+  const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0x9fe9e2,size:.07,map:new THREE.CanvasTexture(c),transparent:true,opacity:.55,depthWrite:false}));scene.add(pts);
+
+  // one pose per section (wide screens / phones)
+  const W=[{x:1.9,y:0,s:1.5,n:.3,m:0,i:1},{x:1.9,y:-.1,s:1.3,n:.45,m:.25,i:.95},{x:1.9,y:.1,s:1.45,n:.65,m:.7,i:.95},{x:1.9,y:-.1,s:1.3,n:.4,m:.15,i:.95},{x:1.9,y:.1,s:1.5,n:.55,m:.55,i:.95},{x:0,y:0,s:1.9,n:.3,m:0,i:.75}];
+  const N=[{x:0,y:-1.15,s:1.25,n:.3,m:0,i:1},{x:.4,y:.8,s:1.2,n:.45,m:.25,i:.4},{x:-.4,y:-.6,s:1.3,n:.6,m:.7,i:.4},{x:.4,y:.5,s:1.2,n:.4,m:.15,i:.4},{x:-.4,y:-.4,s:1.3,n:.5,m:.55,i:.4},{x:0,y:0,s:1.5,n:.3,m:0,i:.4}];
+  const ss=v=>{v=Math.min(1,Math.max(0,v));return v*v*(3-2*v)},ks=["x","y","s","n","m","i"];
+  const cur={},tgt={};let init=false,last=1500,curTab=-1,yaw=0,yawT=0,px=null;
+  addEventListener("touchstart",e=>{px=e.touches[0].clientX},{passive:true});
+  addEventListener("touchmove",e=>{if(px===null)return;const v=e.touches[0].clientX;yawT=Math.max(-1,Math.min(1,yawT+(v-px)*.008));px=v},{passive:true});
+  addEventListener("touchend",()=>{px=null},{passive:true});
+  addEventListener("pointermove",e=>{if(e.pointerType==="mouse")yawT=(e.clientX/innerWidth-.5)*.8});
+
+  const size=()=>{R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()};
+  addEventListener("resize",()=>{size();draw(last)});size();
+
+  function draw(t){
+    last=t;
+    const w=innerWidth,h=innerHeight,K=w/h<1.05?N:W;
+    const p=scrollY+h*.45,tops=secs.map(s=>s.getBoundingClientRect().top+scrollY);
+    let i=0;for(let k=0;k<tops.length;k++)if(tops[k]<=p)i=k;
+    const j=Math.min(i+1,tops.length-1),f=i===j?0:(p-tops[i])/((tops[j]-tops[i])||1),s=ss((f-.3)/.6);
+    ks.forEach(k=>{tgt[k]=K[i][k]+(K[j][k]-K[i][k])*s;cur[k]=(!init||reduce)?tgt[k]:cur[k]+(tgt[k]-cur[k])*.06});init=true;
+    G.position.set(cur.x,cur.y,0);G.scale.setScalar(cur.s);
+    mat.uniforms.uT.value=t*.001;mat.uniforms.uN.value=cur.n;mat.uniforms.uMix.value=cur.m;mat.uniforms.uI.value=cur.i;
+    yaw+=(yawT-yaw)*.06;if(px===null)yawT*=.997;
+    orb.rotation.y=t*.00012+yaw;ring.rotation.z=t*.0002;ring.material.opacity=.55*cur.i;
+    ring.material.color.setHex(cur.m>.4?0xffb347:0x4fd1c5);
+    pts.rotation.y=t*.00002+yaw*.2;pts.material.opacity=.55*cur.i;
+    const cu=s>.5?j:i;if(cu!==curTab){curTab=cu;tabBtns.forEach((bt,k)=>bt.classList.toggle("on",k===cu))}
+    R.render(scene,cam);
+  }
+  if(reduce){draw(1500);addEventListener("scroll",()=>draw(1500),{passive:true})}
+  else{const loop=t=>{draw(t);requestAnimationFrame(loop)};requestAnimationFrame(loop)}
+}catch(err){console.warn("WebGL unavailable",err)}
+</script>
+</body>
+</html>
